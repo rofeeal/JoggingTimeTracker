@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = JoggingTimeTracker.Tests
-build_property.ProjectDir = D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Tests\
+build_property.ProjectDir = d:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Tests\
