@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -76,7 +77,18 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+    c.SwaggerDoc("v1", 
+        new OpenApiInfo { 
+            Title = "Jogging Time Tracker API", 
+            Version = "v1",
+            Description = "This API tracks jogging times of users.",
+            Contact = new OpenApiContact
+            {
+                Name = "Rofaeil Samir Boules",
+                Email = "rofeeal@gmail.com",
+                Url = new Uri("https://github.com/rofeeal/JoggingTimeTracker")
+            }
+        });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -112,6 +124,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
 }
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
