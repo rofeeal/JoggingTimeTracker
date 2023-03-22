@@ -1,53 +1,51 @@
-# Jogging Time Tracker API
-This is a RESTful API that tracks jogging times of users, implemented using .NET Core 6. The API supports authentication, user management, and CRUD operations on jogging times. It also provides filtering by dates and reporting on average speed and distance per week. Examples for how to use the API are provided using a REST client like Postman or Swagger.
+# Jogging Tracker RESTful API
+This ASP.NET Core 6 project provides a RESTful API for tracking jogging times of users. It allows users to create an account, log in, and log out. Once logged in, users can view, edit, and delete their own jogging time entries. There are three roles implemented with different permission levels: a regular user, a user manager, and an admin. Regular users can only CRUD their own records, user managers can CRUD users, and admins can CRUD all records and users. Each jogging time entry includes a date, distance, and time. The API also allows filtering by dates and generating reports on average speed and distance per week.
 
-# Table of Contents
-Installation
-Usage
-API Documentation
-Contributing
-License
-Installation
-To install the Jog Tracker API, you can clone this repository and run it locally on your machine.
+# Toolkit Requirements
+  This project uses the following toolkit:
 
-First, clone the repository using the following command:
+    -Backend web framework: .NET Core 6
+# Usage
+  To use this API, you can either build and run the project on your local machine or deploy it to a server. Once the API is up and running, you can use a REST client like Postman or Swagger to interact with it.
 
-bash
-Copy code
-git clone https://github.com/your-username/jog-tracker-api.git
-Next, navigate to the project directory and restore the required packages using the following command:
+# Default Users
+  To make it easier for you to test the API, we have created some default users for you. You can use the following credentials to log in to the API:
 
-Copy code
-dotnet restore
-Finally, run the application using the following command:
+    - Admin:
+    Username: admin
+    Password: P@ssw0rd
+    - User Manager:
+    Username: usermanager
+    Password: P@ssw0rd
+    - Regular User:
+    Username: regularuser
+    Password: P@ssw0rd
+# Endpoints
+The following endpoints are examples available in this API:
 
-Copy code
-dotnet run
-The API should now be running on http://localhost:5000.
+  /api/auth/register (POST): Creates a new user account.
+  /api/auth/login (POST): Logs in an existing user.
+/api/auth/logout (POST): Logs out the current user.
+  /api/joggingtimes (GET, POST): Returns a list of all jogging times or creates a new jogging time entry.
+  /api/joggingtimes/{id} (GET, PUT, DELETE): Returns a single jogging time entry by ID or updates/deletes an existing jogging time entry.
+  /api/users (GET): Returns a list of all users (only available for user managers and admins).
+  /api/users/{id} (GET, PUT, DELETE): Returns a single user by ID or updates/deletes an existing user (only available for user managers and admins).
+  /api/reports/weekly-stats (GET): Returns a report on average speed and distance per week.
+  For more information on each endpoint, please refer to the Swagger documentation.
 
-Usage
-To use the Jog Tracker API, you will need to have a REST client like Postman or Swagger installed on your machine.
+# Project Structure
+This project is structured as follows:
 
-Once you have a REST client installed, you can use it to make requests to the API endpoints. The API supports the following endpoints:
+JoggingTracker.API: Contains the API controllers and services.
+JoggingTracker.Data: Contains the data context and repositories.
+JoggingTracker.Core: Contains the business logic and models.
+JoggingTracker.sln: The solution file.
+# How to Build and Run
+To build and run the project on your local machine, please follow these steps:
 
-/api/authenticate: Authenticates a user and returns a JWT token
-/api/users: Allows CRUD operations on users (requires admin access)
-/api/jogtimes: Allows CRUD operations on jogging times (requires user or admin access)
-/api/reports/average-speed: Returns the average speed per week for all users (requires user or admin access)
-/api/reports/average-distance: Returns the average distance per week for all users (requires user or admin access)
-To use these endpoints, you will need to include the JWT token in the Authorization header of your requests. You can get a JWT token by making a POST request to the /api/authenticate endpoint with a valid username and password.
-
-API Documentation
-The API documentation is generated using Swagger and can be accessed by visiting http://localhost:5000/swagger when the API is running locally. The Swagger documentation provides detailed information about each endpoint, including example requests and responses.
-
-Contributing
-If you would like to contribute to the Jog Tracker API, please follow these steps:
-
-Fork the repository
-Create a new feature branch (git checkout -b feature-name)
-Implement your feature and write tests
-Commit your changes with a meaningful commit message (git commit -m "Added feature-name")
-Push your branch to your fork (git push origin feature-name)
-Create a pull request from your branch to the main branch of this repository
-License
-The Jog Tracker API is licensed under the MIT License. See the LICENSE file for more information.
+Install .NET Core 6 SDK (if not already installed).
+Clone this repository.
+Open a terminal or command prompt and navigate to the JoggingTracker.API folder.
+Run the command dotnet run.
+Open a web browser and navigate to https://localhost:5001/swagger/index.html to access the Swagger documentation and start using the API.
+That's it! You should now be able to use the API to track jogging times. If you encounter any issues or have any questions, please feel free to contact us.
