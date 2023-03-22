@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "b90lCUmHgph4JAATsTbzRTaspVI4KLo/fppPiVjDEPo=",
+  "Source": "JoggingTimeTracker.API",
+  "BasePath": "_content/JoggingTimeTracker.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,12 @@
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Core\obj\Debug\net6.0\JoggingTimeTracker.Core.csproj.AssemblyReference.cache
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Core\obj\Debug\net6.0\JoggingTimeTracker.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Core\obj\Debug\net6.0\JoggingTimeTracker.Core.AssemblyInfoInputs.cache
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Core\obj\Debug\net6.0\JoggingTimeTracker.Core.AssemblyInfo.cs
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Core\obj\Debug\net6.0\JoggingTimeTracker.Core.csproj.CoreCompileInputs.cache
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Core\bin\Debug\net6.0\JoggingTimeTracker.Core.deps.json
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Core\bin\Debug\net6.0\JoggingTimeTracker.Core.dll
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Core\bin\Debug\net6.0\JoggingTimeTracker.Core.pdb
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Core\obj\Debug\net6.0\JoggingTimeTracker.Core.dll
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Core\obj\Debug\net6.0\refint\JoggingTimeTracker.Core.dll
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Core\obj\Debug\net6.0\JoggingTimeTracker.Core.pdb
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Core\obj\Debug\net6.0\ref\JoggingTimeTracker.Core.dll

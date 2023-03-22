@@ -1,0 +1,17 @@
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\obj\Debug\net6.0\JoggingTimeTracker.Data.csproj.AssemblyReference.cache
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\obj\Debug\net6.0\JoggingTimeTracker.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\obj\Debug\net6.0\JoggingTimeTracker.Data.AssemblyInfoInputs.cache
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\obj\Debug\net6.0\JoggingTimeTracker.Data.AssemblyInfo.cs
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\obj\Debug\net6.0\JoggingTimeTracker.Data.csproj.CoreCompileInputs.cache
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\bin\Debug\net6.0\JoggingTimeTracker.Data.deps.json
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\bin\Debug\net6.0\JoggingTimeTracker.Data.runtimeconfig.json
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\bin\Debug\net6.0\JoggingTimeTracker.Data.dll
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\bin\Debug\net6.0\JoggingTimeTracker.Data.pdb
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\bin\Debug\net6.0\JoggingTimeTracker.Core.dll
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\bin\Debug\net6.0\JoggingTimeTracker.Core.pdb
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\obj\Debug\net6.0\JoggingTimeTracker.Data.csproj.CopyComplete
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\obj\Debug\net6.0\JoggingTimeTracker.Data.dll
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\obj\Debug\net6.0\refint\JoggingTimeTracker.Data.dll
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\obj\Debug\net6.0\JoggingTimeTracker.Data.pdb
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\obj\Debug\net6.0\JoggingTimeTracker.Data.genruntimeconfig.cache
+D:\ASP Projects\SwiftX\New folder\JoggingTimeTracker\JoggingTimeTracker.Data\obj\Debug\net6.0\ref\JoggingTimeTracker.Data.dll

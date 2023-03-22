@@ -1,0 +1,367 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Tests\\JoggingTimeTracker.Tests.csproj": {}
+  },
+  "projects": {
+    "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.API\\JoggingTimeTracker.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.API\\JoggingTimeTracker.API.csproj",
+        "projectName": "JoggingTimeTracker.API",
+        "projectPath": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.API\\JoggingTimeTracker.API.csproj",
+        "packagesPath": "C:\\Users\\rofee\\.nuget\\packages\\",
+        "outputPath": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rofee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Core\\JoggingTimeTracker.Core.csproj": {
+                "projectPath": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Core\\JoggingTimeTracker.Core.csproj"
+              },
+              "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Data\\JoggingTimeTracker.Data.csproj": {
+                "projectPath": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Data\\JoggingTimeTracker.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Core\\JoggingTimeTracker.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Core\\JoggingTimeTracker.Core.csproj",
+        "projectName": "JoggingTimeTracker.Core",
+        "projectPath": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Core\\JoggingTimeTracker.Core.csproj",
+        "packagesPath": "C:\\Users\\rofee\\.nuget\\packages\\",
+        "outputPath": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rofee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[6.27.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.27.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Data\\JoggingTimeTracker.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Data\\JoggingTimeTracker.Data.csproj",
+        "projectName": "JoggingTimeTracker.Data",
+        "projectPath": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Data\\JoggingTimeTracker.Data.csproj",
+        "packagesPath": "C:\\Users\\rofee\\.nuget\\packages\\",
+        "outputPath": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rofee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Core\\JoggingTimeTracker.Core.csproj": {
+                "projectPath": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Core\\JoggingTimeTracker.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Tests\\JoggingTimeTracker.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Tests\\JoggingTimeTracker.Tests.csproj",
+        "projectName": "JoggingTimeTracker.Tests",
+        "projectPath": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Tests\\JoggingTimeTracker.Tests.csproj",
+        "packagesPath": "C:\\Users\\rofee\\.nuget\\packages\\",
+        "outputPath": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rofee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.API\\JoggingTimeTracker.API.csproj": {
+                "projectPath": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.API\\JoggingTimeTracker.API.csproj"
+              },
+              "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Core\\JoggingTimeTracker.Core.csproj": {
+                "projectPath": "D:\\ASP Projects\\SwiftX\\New folder\\JoggingTimeTracker\\JoggingTimeTracker.Core\\JoggingTimeTracker.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.3.2, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.4, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
