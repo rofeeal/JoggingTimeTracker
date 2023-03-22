@@ -11,41 +11,40 @@ This ASP.NET Core 6 project provides a RESTful API for tracking jogging times of
 # Default Users
   To make it easier for you to test the API, we have created some default users for you. You can use the following credentials to log in to the API:
 
-    - Admin:
-    Username: admin
-    Password: P@ssw0rd
-    - User Manager:
-    Username: usermanager
-    Password: P@ssw0rd
-    - Regular User:
-    Username: regularuser
-    Password: P@ssw0rd
+    Admin:
+    - Username: admin
+    - Password: P@ssw0rd
+    User Manager:
+    - Username: usermanager
+    - Password: P@ssw0rd
+    Regular User:
+    - Username: regularuser
+    - Password: P@ssw0rd
 # Endpoints
 The following endpoints are examples available in this API:
 
-  /api/auth/register (POST): Creates a new user account.
-  /api/auth/login (POST): Logs in an existing user.
-/api/auth/logout (POST): Logs out the current user.
-  /api/joggingtimes (GET, POST): Returns a list of all jogging times or creates a new jogging time entry.
-  /api/joggingtimes/{id} (GET, PUT, DELETE): Returns a single jogging time entry by ID or updates/deletes an existing jogging time entry.
-  /api/users (GET): Returns a list of all users (only available for user managers and admins).
-  /api/users/{id} (GET, PUT, DELETE): Returns a single user by ID or updates/deletes an existing user (only available for user managers and admins).
-  /api/reports/weekly-stats (GET): Returns a report on average speed and distance per week.
+  * /api/Authentication/login (POST): Logs in an existing user.
+  * /api/Authentication/logout (POST): Logs out the current user.
+  * /api/JoggingTimes/ (GET, POST): Returns a list of all jogging times or creates a new jogging time entry.
+  * /api/JoggingTimes/{id} (GET, PUT, DELETE): Returns a single jogging time entry by ID or updates/deletes an existing jogging time entry.
+  * /api/users (GET): Returns a list of all users (only available for user managers and admins).
+  * /api/users/{id} (GET, PUT, DELETE): Returns a single user by ID or updates/deletes an existing user (only available for user managers and admins).
+  * /api/JoggingTimes/weekly-stats (GET): Returns a report on average speed and distance per week.
   For more information on each endpoint, please refer to the Swagger documentation.
 
 # Project Structure
 This project is structured as follows:
 
-JoggingTracker.API: Contains the API controllers and services.
-JoggingTracker.Data: Contains the data context and repositories.
-JoggingTracker.Core: Contains the business logic and models.
-JoggingTracker.sln: The solution file.
+* JoggingTracker.API: Contains the API controllers and services.
+* JoggingTracker.Data: Contains the data context and repositories.
+* JoggingTracker.Core: Contains the business logic and models.
+* JoggingTracker.sln: The solution file.
 # How to Build and Run
 To build and run the project on your local machine, please follow these steps:
 
-Install .NET Core 6 SDK (if not already installed).
-Clone this repository.
-Open a terminal or command prompt and navigate to the JoggingTracker.API folder.
-Run the command dotnet run.
-Open a web browser and navigate to https://localhost:5001/swagger/index.html to access the Swagger documentation and start using the API.
+* Install .NET Core 6 SDK (if not already installed).
+* Clone this repository.
+* Open a terminal or command prompt and navigate to the JoggingTracker.API folder.
+* Run the command dotnet run.
+* Open a web browser and navigate to https://localhost:5001/swagger/index.html to access the Swagger documentation and start using the API.
 That's it! You should now be able to use the API to track jogging times. If you encounter any issues or have any questions, please feel free to contact us.
