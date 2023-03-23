@@ -44,6 +44,9 @@ To build and run the project on your local machine, please follow these steps:
 
 * Install .NET Core 6 SDK (if not already installed).
 * Clone this repository.
+* Open a terminal or command prompt and navigate to the JoggingTracker.Data folder.
+* Run the command "dotnet ef migrations add InitialCreate" to create an initial migration for the database.
+* Run the command "dotnet ef database update" to apply the migration and create the database.
 * Open a terminal or command prompt and navigate to the JoggingTracker.API folder.
 * Run the command dotnet run.
 * Open a web browser and navigate to https://localhost:5001/swagger/index.html to access the Swagger documentation and start using the API.
