@@ -3,6 +3,7 @@ using JoggingTimeTracker.Core.Models;
 using JoggingTimeTracker.Core.Models.Results;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace JoggingTimeTracker.Core.Services
 {
@@ -17,70 +18,67 @@ namespace JoggingTimeTracker.Core.Services
             _roleManager = roleManager;
         }
 
-        public async Task<IEnumerable<ApplicationUser>> GetAllUsersAsync()
+        public async Task<ResultWithData<IEnumerable<ApplicationUser>>> GetAllUsersAsync()
         {
-            return await _userManager.Users.ToListAsync();
+            var users = await _userManager.Users.ToListAsync();
+            if (users.Any())
+            {
+                return ResultWithData<IEnumerable<ApplicationUser>>.Success(users);
+            }
+
+            return ResultWithData<IEnumerable<ApplicationUser>>.Error("No users found");
         }
 
-        public async Task<ApplicationUser> GetUserByIdAsync(string id)
+        public async Task<ResultWithData<ApplicationUser>> GetUserByIdAsync(string id)
         {
-            return await _userManager.FindByIdAsync(id);
+            var user = await _userManager.FindByIdAsync(id);
+            if (user != null)
+            {
+                return ResultWithData<ApplicationUser>.Success(user);
+            }
+
+            return ResultWithData<ApplicationUser>.Error("User not found");
         }
 
-        public async Task<IEnumerable<ApplicationUser>> GetUsersByRole(string roleName)
+        public async Task<ResultWithData<IList<ApplicationUser>>> GetUsersByRole(string roleName)
         {
             var role = await _roleManager.FindByNameAsync(roleName);
             if (role != null)
             {
                 var usersInRole = await _userManager.GetUsersInRoleAsync(roleName);
-                return usersInRole;
+                return ResultWithData<IList<ApplicationUser>>.Success(usersInRole);
             }
 
-            return Enumerable.Empty<ApplicationUser>();
+            return ResultWithData<IList<ApplicationUser>>.Error("Role not found");
         }
 
-        public async Task<Result> CreateUserAsync(ApplicationUser user, string password)
+        public async Task<ResultWithData<ApplicationUser>> CreateUserAsync(ApplicationUser user, string password)
         {
-            var resultDto = new Result();
             var result = await _userManager.CreateAsync(user, password);
 
             if (result.Succeeded)
             {
                 await AddUserToRole(user, user.Role);
-                resultDto.Succeeded = true;
-                resultDto.Message = "User created successfully.";
-            }
-            else
-            {
-                resultDto.Succeeded = false;
-                resultDto.Message = "Failed to create user.";
-                resultDto.Errors = result.Errors.Select(e => e.Description);
+                return ResultWithData<ApplicationUser>.Success(user);
             }
 
-            return resultDto;
+            var errorMessages = result.Errors.Select(e => e.Description).ToList();
+            return ResultWithData<ApplicationUser>.Error(errorMessages.FirstOrDefault() ?? "An error occurred while creating the user");
         }
 
-
-        public async Task<Result> UpdateUserAsync(ApplicationUser user)
+        public async Task<ResultWithData<ApplicationUser>> UpdateUserAsync(ApplicationUser user)
         {
-            var resultDto = new Result();
-            var result = await _userManager.UpdateAsync(user);
-
-            if (result.Succeeded)
+            try
             {
-                resultDto.Succeeded = true;
-                resultDto.Message = "User updated successfully.";
-            }
-            else
-            {
-                resultDto.Succeeded = false;
-                resultDto.Message = "Failed to update user.";
-                resultDto.Errors = result.Errors.Select(e => e.Description);
-            }
+                var result = await _userManager.UpdateAsync(user);
 
-            return resultDto;
+                return ResultWithData<ApplicationUser>.Success(user);
+            }
+            catch (Exception ex)
+            {
+                return ResultWithData<ApplicationUser>.Error("Failed to update user. " + ex.Message);
+            }
         }
-
 
         public async Task<Result> DeleteUserAsync(string id)
         {
@@ -112,21 +110,37 @@ namespace JoggingTimeTracker.Core.Services
             return resultDto;
         }
 
-
-        public async Task AddUserToRole(ApplicationUser user, string roleName)
+        public async Task<Result> AddUserToRole(ApplicationUser user, string roleName)
         {
             if (!await _roleManager.RoleExistsAsync(roleName))
             {
                 await _roleManager.CreateAsync(new IdentityRole(roleName));
             }
 
-            await _userManager.AddToRoleAsync(user, roleName);
+            var result = await _userManager.AddToRoleAsync(user, roleName);
+
+            if (result.Succeeded)
+            {
+                return new Result { Succeeded = true, Message = "User added to role successfully." };
+            }
+
+            var errorMessages = result.Errors.Select(e => e.Description).ToList();
+            return new Result { Succeeded = false, Message = "Failed to add user to role.", Errors = errorMessages };
         }
 
-        public async Task RemoveUserFromRole(ApplicationUser user, string roleName)
+        public async Task<Result> RemoveUserFromRole(ApplicationUser user, string roleName)
         {
-            await _userManager.RemoveFromRoleAsync(user, roleName);
+            var result = await _userManager.RemoveFromRoleAsync(user, roleName);
+
+            if (result.Succeeded)
+            {
+                return new Result { Succeeded = true, Message = "User removed from role successfully." };
+            }
+
+            var errorMessages = result.Errors.Select(e => e.Description).ToList();
+            return new Result { Succeeded = false, Message = "Failed to remove user from role.", Errors = errorMessages };
         }
+
 
     }
 }

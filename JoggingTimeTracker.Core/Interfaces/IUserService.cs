@@ -5,13 +5,13 @@ namespace JoggingTimeTracker.Core.Interfaces
 {
     public interface IUserService
     {
-        Task<IEnumerable<ApplicationUser>> GetAllUsersAsync();
-        Task<ApplicationUser> GetUserByIdAsync(string id);
-        Task<IEnumerable<ApplicationUser>> GetUsersByRole(string roleName);
-        Task<Result> CreateUserAsync(ApplicationUser user, string password);
-        Task<Result> UpdateUserAsync(ApplicationUser user);
+        Task<ResultWithData<IEnumerable<ApplicationUser>>> GetAllUsersAsync();
+        Task<ResultWithData<ApplicationUser>> GetUserByIdAsync(string id);
+        Task<ResultWithData<IList<ApplicationUser>>> GetUsersByRole(string roleName);
+        Task<ResultWithData<ApplicationUser>> CreateUserAsync(ApplicationUser user, string password);
+        Task<ResultWithData<ApplicationUser>> UpdateUserAsync(ApplicationUser user);
         Task<Result> DeleteUserAsync(string id);
-        Task AddUserToRole(ApplicationUser user, string roleName);
-        Task RemoveUserFromRole(ApplicationUser user, string roleName);
+        Task<Result> AddUserToRole(ApplicationUser user, string roleName);
+        Task<Result> RemoveUserFromRole(ApplicationUser user, string roleName);
     }
 }

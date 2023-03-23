@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using JoggingTimeTracker.API.DTOs.JoggingTime;
+using JoggingTimeTracker.API.DTOs.User;
 using JoggingTimeTracker.Core.Models;
+using JoggingTimeTracker.Core.Models.Results;
 
 namespace JoggingTimeTracker.API.Utils
 {
@@ -21,6 +23,13 @@ namespace JoggingTimeTracker.API.Utils
                 .ForMember(dest => dest.DistanceInMeter, opt => opt.MapFrom(src => src.DistanceInMeter))
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.JoggingTimeId))
                 .ForMember(dest => dest.Time, opt => opt.MapFrom(src => src.Time.ToString(@"hh\:mm\:ss")));
+
+
+            CreateMap<ApplicationUser, UserDto>();
+            CreateMap<UserCreateDto, ApplicationUser > ();
+            CreateMap<UserUpdateDto, ApplicationUser > ()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.UserId));
         }
     }
+
 }

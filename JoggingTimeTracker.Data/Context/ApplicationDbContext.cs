@@ -16,9 +16,6 @@ namespace JoggingTimeTracker.Data.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            // seed data
-            
         }
     }
 }
